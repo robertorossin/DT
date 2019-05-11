@@ -170,13 +170,13 @@ DemoAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
        for (DTDigiCollection::const_iterator digi = digiRange.first;
              digi != digiRange.second;
              ++digi)
-  {
-    const double time      = digi->time();
-    const double countsTDC = digi->countsTDC();
-//     const DTWireId wireIdtmp(layerId, (*digi).wire());
-    h_simMuonDTDigis_time_     ->Fill(time       );
-    h_simMuonDTDigis_countsTDC_->Fill(countsTDC);
-  }
+	 {
+	   const double time      = digi->time();
+	   const double countsTDC = digi->countsTDC();
+	   //     const DTWireId wireIdtmp(layerId, (*digi).wire());
+	   h_simMuonDTDigis_time_     ->Fill(time       );
+	   h_simMuonDTDigis_countsTDC_->Fill(countsTDC);
+	 }
 
      }
 
